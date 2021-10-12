@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    background-color: #757575;
+}
+.section-program{
+    height: 39rem;
+    width: 60rem;
+    background-color: #fff;
+    position: absolute;
+    left: 12rem;
+}
+.links{
+    position: relative;
+    top: 20px;
+}
+.nav-links{
+    text-decoration: none;
+    color: #3d3d3d;
+    position: relative;
+    left: 32rem;
+    font-size: 1.3rem;
+    justify-content: right;
+}
+.text-index h1, h2, h3{
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    line-height: 38px;
+}
+.footer{
+    position: relative;
+    top: 13rem;
+}
+.footer p{
+    line-height: 6px;
+    text-align: center;
+}
+.line-header{
+    margin: 40px 0;
+}
