@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Conteiner {
+  id        String @id @default(uuid())
+  cliente   String
+  conteiner String
+  tipo      String
+  status    String
+  categoria String
+
+  movimentacoes Movimentacao[]
+
+  @@map("conteiners")
+}
+
+model Movimentacao {
+  id               String    @id @default(uuid())
+  conteiner_id     String
+  conteiner        Conteiner @relation(fields: [conteiner_id], references: [id])
+  tipo             String
+  data_Hora_Inicio DateTime  @default(now())
+  data_hora_fim    DateTime  @default(now())
+
+  @@map("movimentacoes")
+}
